@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Should never need to scroll so this is ok */
+  background-color: #02021E;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.info-container {
+  position: absolute;
+}
+
