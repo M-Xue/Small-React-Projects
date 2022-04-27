@@ -105,10 +105,12 @@ export default function Stopwatch() {
 
       {/* With deciseconds */}
       <div>
-        {render_minutes()}
+        {/* {render_minutes()}
         {`0${(Math.floor(time / 100)) % 60}`.slice(-2)}
         .
-        {`0${time}`.slice(-2)}
+        {`0${time}`.slice(-2)} */}
+
+        {render_minutes() + `0${(Math.floor(time / 100)) % 60}`.slice(-2) + '.' + `0${time}`.slice(-2)}
       </div>
 
 
