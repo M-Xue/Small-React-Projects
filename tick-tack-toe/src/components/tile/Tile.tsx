@@ -9,11 +9,11 @@ interface boardState {
   setBoard: (board: string[][]) => void;
   row: number;
   col: number;
-  reset_board: () => void;
+  setWinner: (winner: string) => void;
 }
 
 
-export default function Tile({ o_turn, setO_turn, board, setBoard, row, col, reset_board }: boardState) {
+export default function Tile({ o_turn, setO_turn, board, setBoard, row, col, setWinner }: boardState) {
  
 
   function check_win() {
@@ -133,6 +133,9 @@ export default function Tile({ o_turn, setO_turn, board, setBoard, row, col, res
         setBoard(new_board);
 
         if (check_win()) {
+
+          setWinner('o');
+
           setO_turn(null);
         } else {
           setO_turn(false);
@@ -148,6 +151,7 @@ export default function Tile({ o_turn, setO_turn, board, setBoard, row, col, res
         setBoard(new_board);
 
         if (check_win()) {
+          setWinner('x')
           setO_turn(null);
         } else {
           setO_turn(true);
