@@ -1,7 +1,10 @@
 .grid-container {
     background-color: #0E1525;
-    height: 20em;
-    width: 20em;
+    height: 10em;
+    width: 10em;
     padding: 3em;
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
