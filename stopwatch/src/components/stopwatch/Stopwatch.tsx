@@ -5,8 +5,8 @@ export default function Stopwatch() {
 
   const [time, setTime] = useState<number>(0)
   const [start, setStart] = useState<boolean>(false)
-  const [startTime, setStartTime] = useState(Date.now())
-  const [pausedTime, setPausedTime] = useState(Date.now())
+  const [startTime, setStartTime] = useState<number>(Date.now())
+  const [pausedTime, setPausedTime] = useState<number>(Date.now())
 
   function handleStartStop(event: MouseEvent) {
 
@@ -36,7 +36,7 @@ export default function Stopwatch() {
     let interval: any = null;
     if (start === true) {
 
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         // For just minutes and seconds or just seconds
         // setTime(Math.floor((Date.now() - startTime)/1000))
         
