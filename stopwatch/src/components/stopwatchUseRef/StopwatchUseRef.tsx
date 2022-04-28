@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react'
-import './stopwatch.css'
+import React, { useState, useEffect, useRef } from 'react'
+import './stopwatchUseRef.css'
 
-// This is a common implementation of a stopwatch in React. It uses setInterval to incremet the time.
-// Note: The time state must be left out of the useEffect dependncy array or it will cause to many rerenders and calculations, slowing down the stopwatch.
-// Note: This implementation does not work if you change tabs because the screen stops rendering, resulting in the stopwatch pausing.
 
-export default function Stopwatch() {
+
+export default function StopwatchUseRef() {
+
 	const [time, setTime] = useState(0)
 	const [isActive, setIsActive] = useState(false)
+
+	const interval: any = useRef();
 	useEffect(() => {
-	  let interval: any = null;
 	  if (isActive === true) {
-		interval = setInterval(() => {
+		interval.current = setInterval(() => {
 			setTime((prev) => prev + 1)
 		}, 10)
 	  } else {
-		  clearInterval(interval);
+		  clearInterval(interval.current);
 	  }
 	
 	  return () => {
-		clearInterval(interval);
+		clearInterval(interval.current);
 	  }
 	}, [isActive])
 	
