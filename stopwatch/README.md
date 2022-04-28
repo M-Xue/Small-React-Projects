@@ -26,5 +26,5 @@ Note:
 This implementation just uses useRef to hold the ID returned by setInterval instead of declaring it in the useEffect().   
 
 This implementation was heavily inspired from this [guide](https://learnreact.design/posts/react-useref-by-example#example-2-stopwatch-clear-interval).   
-More accurate version use Date object can be found [here](https://codesandbox.io/s/useref-cancelable-interval-uljky?file=/src/App.js).   
+More accurate version using Date object can be found [here](https://codesandbox.io/s/useref-cancelable-interval-uljky?file=/src/App.js).   
 
