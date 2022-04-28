@@ -1,7 +1,7 @@
 # Stopwatch React App   
 This stopwatch app has three different implementations of a stopwatch.
-- setInterval
 - Date Object
+- setInterval
 - useRef
    
 
@@ -16,7 +16,7 @@ If we use setTimeout and the current run of the useEffect was in the same millis
 Note: This implementation also uses mouse click handle functions for starting/stopping and resetting the stopwatch because the logic for these operations are more complex than starting/stopping and resetting for the implementations below so it has a good example of deating with mouse events with TypeScript
 
 ## setInterval   
-This is a common implementation of a stopwatch in React. It uses setInterval to incremet the time.
+This is a common implementation of a stopwatch in React. It uses setInterval to increment the time.
 Note: 
 - The time state must be left out of the useEffect dependncy array or it will cause to many rerenders and calculations, slowing down the stopwatch.
 - This implementation does not work if you change tabs because the screen stops rendering, resulting in the stopwatch pausing.
